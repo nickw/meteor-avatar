@@ -23,6 +23,17 @@ Template.avatar.helpers({
   initials: function () {
     var user = this.user ? this.user : Meteor.users.findOne(this.userId);
     return this.initials || Avatar.getInitials(user);
+  },
+
+  dimensions: function() {
+    var dimensions = {};
+    if (this.width) {
+      dimensions.width = this.width;
+    }
+    if (this.height) {
+      dimensions.height = this.height;
+    }
+    return dimensions;
   }
 
 });

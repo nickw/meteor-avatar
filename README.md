@@ -17,7 +17,7 @@ Usage
 In an HTML file:
 ```
 {{> avatar (user=<user> || userId=<userId>) (class='(avatar-large || avatar-small) (avatar-rounded || avatar-circle)')
-    (bgColor='<color>') (txtColor='<color>') }}
+    (bgColor='<color>') (txtColor='<color>') (width=100) (height=100) }}
 ```
 Optional template parameters:
   1. `user` or `userId`: Either a user object or userId string (if neither -> default avatar).
