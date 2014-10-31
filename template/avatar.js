@@ -27,12 +27,18 @@ Template.avatar.helpers({
 
   dimensions: function() {
     var dimensions = {};
+
+    if (this.size) {
+      dimensions.width = this.size;
+      dimensions.height = this.size;
+    }
     if (this.width) {
       dimensions.width = this.width;
     }
     if (this.height) {
       dimensions.height = this.height;
     }
+    
     return dimensions;
   }
 
